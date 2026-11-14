@@ -1,0 +1,31 @@
+# ===== Keil MDK 编译产物 =====
+MDK-ARM/remote_control/
+MDK-ARM/Objects/
+MDK-ARM/Listings/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.sct
+*.dep
+*.htm
+*.uvguix.*
+*.uvoptx
+*.dbgconf
+
+# ===== VS Code 本地配置 =====
+.vscode/
+
+# ===== 系统文件 =====
+Thumbs.db
+desktop.ini
+
+# ===== 可选：不想传的大文件就取消下面注释 =====
+# 遥控手柄.eprj2
+# 遥控手柄_backup/
