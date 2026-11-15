@@ -23,14 +23,10 @@
 #include "usart.h"
 #include "gpio.h"
 
+/* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_key.h"
 #include "protocol.h"
-/* USER CODE END Includes */
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,12 +107,12 @@ int main(void)
   {
     Key_Scan();
     /* USER CODE END WHILE */
-		if (HAL_GetTick() - last_send_tick >= 20){
+
+    /* USER CODE BEGIN 3 */
+    if (HAL_GetTick() - last_send_tick >= 20){
 			last_send_tick = HAL_GetTick();
 			Send_Data();
 		}
-
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -185,8 +181,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
